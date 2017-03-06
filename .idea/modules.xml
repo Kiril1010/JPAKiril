@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JPAKiril.iml" filepath="$PROJECT_DIR$/.idea/modules/JPAKiril.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JPAKiril_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JPAKiril_main.iml" group="JPAKiril" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JPAKiril_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JPAKiril_test.iml" group="JPAKiril" />
+    </modules>
+  </component>
+</project>
