@@ -1,10 +1,11 @@
 package inheritance;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue(value = "mercedes")
 public class Mercedes extends Car {
-
 
     private int countOfDoors;
 

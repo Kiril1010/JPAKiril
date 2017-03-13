@@ -6,16 +6,37 @@
     <persistence-unit name="jpa_kiril" >
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <class>kiril.Person</class>
-        <class>inheritance.Car</class>
+        <!--<class>kiril.Person</class>-->
+        <!--<class>inheritance.Car</class>
         <class>inheritance.Bmw</class>
-        <class>kiril.GetObjectsFromDB</class>
-        <class>kiril.LearnCriteriaQueries</class>
-        <class>kiril.EntityManagerTool</class>
-        <class>relationship.Unidirectional.AddressUni</class>
-        <class>relationship.Unidirectional.StudentUni</class>
-        <class>relationship.BiDirectional.AddressBi</class>
-        <class>relationship.BiDirectional.StudentBi</class>
+        <class>inheritance.Mercedes</class>-->
+        <!--<class>kiril.GetObjectsFromDB</class>-->
+        <!--<class>kiril.LearnCriteriaQueries</class>-->
+        <!--<class>kiril.EntityManagerTool</class>-->
+       <!-- <class>relationship.unidirectional.AddressUni</class>
+        <class>relationship.unidirectional.StudentUni</class>-->
+        <!--<class>relationship.BiDirectional.AddressBi</class>-->
+        <!--<class>relationship.BiDirectional.StudentBi</class>-->
+        <!--<class>relationship.bi_directional.one_to_many.EmailBidirectional</class>-->
+        <!--<class>relationship.bi_directional.one_to_many.Letter</class>-->
+        <!--<class>relationship.bi_directional.many_to_many.unidirection.BigDogUni</class>-->
+        <!--<class>relationship.bi_directional.many_to_many.unidirection.PersonUni</class>-->
+        <!--<class>relationship.bi_directional.many_to_many.bidirection.BigDogBi</class>-->
+        <!--<class>relationship.bi_directional.many_to_many.bidirection.PersonBi</class>-->
+        <!--<class>relationship.strategy_for_generation_ids.AddressUni</class>-->
+        <!--<class>relationship.strategy_for_generation_ids.StudentUni</class>-->
+        <!--<class>dao.MySQLAddressDAO</class>-->
+        <!--<class>dao.MySQLStudentDAO</class>-->
+        <!--<class>dao.MySQLDAOFactory</class>-->
+       <class>final_project.Address</class>
+        <class>final_project.Advertisement</class>
+        <class>final_project.Author</class>
+        <class>final_project.Email</class>
+        <class>final_project.Phone</class>
+        <class>final_project.Rubric</class>
+        <class>final_project.Menu</class>
+        <class>final_project.RubricService</class>
+
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />

@@ -1,10 +1,11 @@
 package inheritance;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
+@DiscriminatorValue(value = "bmw")
 public class Bmw extends Car {
-
 
     private String series;
 

@@ -8,22 +8,34 @@ public class Email {
 
     @Id
     @GeneratedValue
-    private int emailId;
+    private int id;
 
-    @Column(name = "Email_address")
-    private String emailAddress;
+    @Column(name = "email")
+    private String email;
+
+    @ManyToOne
+    @JoinColumn(name = "email_fk_id")
+    private Author author;
 
     public Email() {}
 
-    public Email(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public Email(String email) {
+        this.email = email;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

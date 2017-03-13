@@ -13,9 +13,13 @@ public class Test {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
-        Car car = new Bmw("BMW", "5");
+        Car bmw = new Bmw("BMW", "5");
+        Car merc = new Mercedes("Vito", 4);
+//        Car car  = new Car("Some model");
 
-        entityManager.persist(car);
+        entityManager.persist(bmw);
+//        entityManager.persist(car);
+        entityManager.persist(merc);
 
         transaction.commit();
         entityManager.close();
