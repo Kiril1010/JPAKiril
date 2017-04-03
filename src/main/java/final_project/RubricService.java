@@ -1,18 +1,19 @@
 package final_project;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
-public class RubricService {
+public class RubricService implements PersistService<Rubric>{
+    private List<Rubric> rubrics;
 
-    @Id
-    @GeneratedValue
-    private int id;
+    public RubricService() {
+        rubrics = new ArrayList<>();
+    }
+
 
     public void addRubric(String name) {
-        Rubric rubric = new Rubric();
-        rubric.setName(name);
+        Rubric rubric1 = new Rubric(name);
+        rubrics.add(rubric1);
+        save(rubric1);
     }
 }

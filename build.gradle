@@ -15,4 +15,5 @@ dependencies {
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
     compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '3.5.6-Final'
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.12'
+    //compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.1.Final'
 }

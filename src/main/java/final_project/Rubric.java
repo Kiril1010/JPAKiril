@@ -15,15 +15,15 @@ public class Rubric {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "rubric")
-    @Column(name = "rubric")
-    private List<Advertisement> rubrics;
+    @OneToMany(mappedBy = "rubric", cascade = CascadeType.PERSIST)
+    @Column(name = "rubric_table")
+    private List<Advertisement> advertisements;
 
     public Rubric() {}
 
     public Rubric(String name) {
         this.name = name;
-        this.rubrics = new LinkedList<>();
+        this.advertisements = new LinkedList<>();
     }
 
     public String getName() {
@@ -35,14 +35,14 @@ public class Rubric {
     }
 
     public void addAdvert(Advertisement advertisement) {
-        rubrics.add(advertisement);
+        advertisements.add(advertisement);
     }
 
-    public List<Advertisement> getRubrics() {
-        return rubrics;
+    public List<Advertisement> getAdvertisements() {
+        return advertisements;
     }
 
-    public void setRubrics(List<Advertisement> rubrics) {
-        this.rubrics = rubrics;
+    public void setAdvertisements(List<Advertisement> advertisements) {
+        this.advertisements = advertisements;
     }
 }

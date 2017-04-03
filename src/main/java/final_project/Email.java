@@ -3,11 +3,13 @@ package final_project;
 import javax.persistence.*;
 
 @Entity
+@SequenceGenerator(name = Email.email_id, sequenceName = Email.email_id, initialValue = 1, allocationSize = 50)
 @Table(name = "email")
 public class Email {
 
+    public static final String email_id = "email_id";
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = email_id)
     private int id;
 
     @Column(name = "email")
@@ -38,4 +40,5 @@ public class Email {
     public void setAuthor(Author author) {
         this.author = author;
     }
+
 }

@@ -1,9 +1,9 @@
 //Создать приложение Доска объявлений.
 //        Автор может иметь несколько объявлений в разных рубриках.
 //        Приложение должно позволять:
-//        1) Создавать Рубрику с/без объявлений.
-//        2) Создавать Объявление(название, дата публикации, текст объявления, стоимость услуги,
-//        автор(телефоны(отдельная сущность), адрес(отдельная сущность), имя, э/почта(отдельная сущность)).
+//     +   1) Создавать Рубрику с/без объявлений.
+//     +  2) Создавать Объявление(название, дата публикации, текст объявления, стоимость услуги,
+//     +   автор(телефоны(отдельная сущность), адрес(отдельная сущность), имя, э/почта(отдельная сущность)).
 //        3) Редактировать объявление, личную информацию автора и рубрику.
 //        4) Удалять объявление/рубрику.
 //        5) Удалять все объявления автора.
@@ -14,20 +14,18 @@
 package final_project;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
 
 @Entity
 @Table(name = "advertisement")
 public class Advertisement {
 
-    private static final Scanner scanner = new Scanner(System.in);
-
     @Id
     @GeneratedValue
     private int id;
+
+    @Version
+    private int version;
 
     @Column(name = "name")
     private String name;
@@ -42,39 +40,33 @@ public class Advertisement {
     @Column(name = "price")
     private double price;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "author")
     private Author author;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "rubric_id")
     private Rubric rubric;
 
     public Advertisement() {}
 
-    public Advertisement(String name, Date date, String text, double price, Author author) {
+    public Advertisement(String name, Date date, String text, double price, Author author, Rubric rubric) {
         this.name = name;
         this.date = date;
         this.text = text;
         this.price = price;
         this.author = author;
-    }
-
-    public Advertisement(String name, Date date, String text, double price, Author author, Rubric rubric) {
-        this(name, date, text, price, author);
         this.rubric = rubric;
     }
 
-    public void addNewAdvertisement() {
-        System.out.println("Please enter the name of advertisement");
-        String name = scanner.nextLine();
-        System.out.println("Please enter the text of advertisement");
-        String text = scanner.nextLine();
-        System.out.println("Please enter the price");
-        double price = scanner.nextInt();
-        Date date = new Date();
+//    public Advertisement(String name, Date date, String text, double price, Author author, Rubric rubric) {
+//        this(name, date, text, price, author);
+//        this.rubric = rubric;
+//    }
 
-        }
+    public int getId() {
+        return id;
+    }
 
     public String getName() {
         return name;
