@@ -102,7 +102,9 @@ public class Test {
         Advertisement advertisementTen = new Advertisement("Adv10", date, "Sell SELL",
                 68, authorTimur, rubricAutoSale);
 
-        rubricAutoSale.setAdvertisements(Arrays.asList(advertisementOne, advertisementTwo));
+        rubricAutoSale.setAdvertisements(Arrays.asList(advertisementOne, advertisementTwo, advertisementThree,
+                advertisementFour, advertisementFive, advertisementSix,advertisementSeven,advertisementEight,
+                advertisementNine,advertisementTen));
 //        addressKiril.setAuthor(authorKiril);
 //        addressDima.setAuthor(authorDima);
 //        addressTimur.setAuthor(authorTimur);
@@ -156,8 +158,19 @@ public class Test {
                 111, authorTimur, rubricAutoSale);
         service1.createNewAdvertisement(advertisementEleven, 12, authorTimur);
 //
-        authorKiril.setName("NewAuthor");
+//        authorKiril.setName("NewAuthor");
         service1.changeAdvertisement(advertisementOne.getId(), "Changed adv", date, "I change this adv",
                 10000, authorKiril, rubricElectronic);
+
+        service1.deleteAdvertisement(advertisementTen.getId());
+
+        RubricService rubricService = new RubricService();
+        rubricElectronic.setAdvertisements(Arrays.asList(advertisementSix, advertisementSeven));
+        advertisementSix.setRubric(rubricElectronic);
+        advertisementSeven.setRubric(rubricElectronic);
+        rubricService.deleteRubric(rubricElectronic.getId());
+
+        authorKiril.setAdvertisements(Arrays.asList(advertisementOne, advertisementTwo, advertisementThree));
+        service1.deleteAllAdvertisementsByAuthor(authorKiril.getId());
     }
 }

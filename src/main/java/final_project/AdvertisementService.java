@@ -5,7 +5,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 public class AdvertisementService implements PersistService<Advertisement> {
@@ -24,7 +23,6 @@ public class AdvertisementService implements PersistService<Advertisement> {
 
         transaction.commit();
         entityManager.close();
-
     }
 
     public void changeAdvertisement(int id, String name, Date date, String text, double price, Author author, Rubric rubric) {
@@ -46,7 +44,33 @@ public class AdvertisementService implements PersistService<Advertisement> {
 
         transaction.commit();
         entityManager.close();
-//        save(advertisement);
+    }
+
+    public void deleteAdvertisement(int id) {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+
+        Advertisement advertisement = entityManager.find(Advertisement.class, id);
+        entityManager.remove(advertisement);
+
+        transaction.commit();
+        entityManager.close();
+    }
+
+    public void deleteAllAdvertisementsByAuthor(int id) {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+
+        Author author = entityManager.find(Author.class, id);
+        List<Advertisement> advertisements = author.getAdvertisements();
+        advertisements.clear();
+
+        transaction.commit();
+        entityManager.close();
     }
 }
 

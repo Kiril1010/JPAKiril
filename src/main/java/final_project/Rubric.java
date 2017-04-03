@@ -15,7 +15,7 @@ public class Rubric {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "rubric", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "rubric", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @Column(name = "rubric_table")
     private List<Advertisement> advertisements;
 
@@ -44,5 +44,9 @@ public class Rubric {
 
     public void setAdvertisements(List<Advertisement> advertisements) {
         this.advertisements = advertisements;
+    }
+
+    public int getId() {
+        return id;
     }
 }

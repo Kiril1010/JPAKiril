@@ -70,4 +70,16 @@ public class Author {
     public void setPhones(List<Phone> phones) {
         this.phones = phones;
     }
+
+    public List<Advertisement> getAdvertisements() {
+        return advertisements;
+    }
+
+    public void setAdvertisements(List<Advertisement> advertisements) {
+        this.advertisements = advertisements;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
