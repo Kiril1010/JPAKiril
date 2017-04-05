@@ -67,7 +67,7 @@ public class AdvertisementService implements PersistService<Advertisement> {
 
         Author author = entityManager.find(Author.class, id);
         List<Advertisement> advertisements = author.getAdvertisements();
-        advertisements.clear();
+        entityManager.remove(advertisements);
 
         transaction.commit();
         entityManager.close();

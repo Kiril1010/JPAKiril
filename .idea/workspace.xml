@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce9e9110-a6dc-48fb-af92-4b84852750f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/Advertisement.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/Advertisement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/AdvertisementService.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/AdvertisementService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/Author.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/Author.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/Rubric.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/Rubric.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/RubricService.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/RubricService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/final_project/Test.java" afterPath="$PROJECT_DIR$/src/main/java/final_project/Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -116,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2058">
-              <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="35" />
+            <state relative-caret-position="450">
+              <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvertisementService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdvertisementService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/final_project/AdvertisementService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+            <state relative-caret-position="262">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,8 +141,8 @@
       <file leaf-file-name="Author.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Author.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="842">
+              <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1163#1164#0" expanded="true" />
@@ -167,6 +165,7 @@
                 <element signature="e#1807#1808#0" expanded="true" />
                 <element signature="e#1880#1881#0" expanded="true" />
                 <element signature="e#1932#1933#0" expanded="true" />
+                <element signature="e#1958#1959#0" expanded="true" />
                 <element signature="e#1983#1984#0" expanded="true" />
               </folding>
             </state>
@@ -212,12 +211,11 @@
       <file leaf-file-name="Advertisement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Advertisement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="639">
+              <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding>
-                <element signature="e#0#2813#0" expanded="true" />
+                <element signature="e#0#2613#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <marker date="1491252624271" expanded="true" signature="1948:1953" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1622,22 +1620,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.5.6-Final/7dcc6a85b33456f480b9713d161d78f86c31d52e/hibernate-entitymanager-3.5.6-Final-sources.jar!/org/hibernate/ejb/AbstractEntityManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="700" column="0" lean-forward="false" selection-start-line="700" selection-start-column="0" selection-end-line="700" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Advertisement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="639">
+          <caret line="59" column="5" lean-forward="false" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
-            <element signature="e#0#2813#0" expanded="true" />
+            <element signature="e#0#2613#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <marker date="1491252624271" expanded="true" signature="1948:1953" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Author.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="81" column="24" lean-forward="false" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        <state relative-caret-position="842">
+          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1163#1164#0" expanded="true" />
@@ -1660,33 +1665,26 @@
             <element signature="e#1807#1808#0" expanded="true" />
             <element signature="e#1880#1881#0" expanded="true" />
             <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
             <element signature="e#1983#1984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/3.5.6-Final/7dcc6a85b33456f480b9713d161d78f86c31d52e/hibernate-entitymanager-3.5.6-Final-sources.jar!/org/hibernate/ejb/AbstractEntityManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="700" column="0" lean-forward="false" selection-start-line="700" selection-start-column="0" selection-end-line="700" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/final_project/AdvertisementService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/final_project/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2058">
-          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="35" />
+        <state relative-caret-position="450">
+          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/final_project/AdvertisementService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

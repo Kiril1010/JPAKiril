@@ -7,42 +7,10 @@ import javax.persistence.Persistence;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
 public class Test {
 
-//    static RubricService rubricService = new RubricService();
-//    public static void getMenu() {
-//        Scanner scannerMenu = new Scanner(System.in);
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter 1 to add new rubric");
-//        System.out.println("Enter 2 to add new advertisement");
-//        String key = scannerMenu.nextLine();
-//        while (true) {
-//            switch (key) {
-//                case "1": {
-//                    System.out.println("Enter the name of rubric");
-//                    String nameRubric = scanner.nextLine();
-//                    Rubric rubric = new Rubric(nameRubric);
-//                    rubricService.addRubric(rubric);
-//                    rubricService.save(rubric);
-//                    break;
-//                }
-//                case "2": {
-//                    System.out.println("Enter the name of advertisement");
-//                    String nameAdvertisement = scanner.nextLine();
-//                    //rubricService.addRubric(nameAdvertisement);
-//                    break;
-//                }
-//            } break;
-//        }
-//    }
-
     public static void main(String[] args) {
-//        Menu menu = new Menu();
-//        menu.getMenu();
-//        RubricService service = new RubricService();
-//        service.addRubric("TV Set");
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -67,7 +35,7 @@ public class Test {
         Phone phoneTimurMTS = new Phone("0999219933");
         Phone phoneTimurKievstar = new Phone("06799219933");
 
-        List<Email> emailsKiril = Arrays.asList(emailKiril);//new int[]{1,2,3}
+        List<Email> emailsKiril = Arrays.asList(emailKiril);
         List<Email> emailsDima = Arrays.asList(emailDima);
         List<Email> emailsTimur = Arrays.asList(emailTimur);
 
@@ -103,58 +71,19 @@ public class Test {
                 68, authorTimur, rubricAutoSale);
 
         rubricAutoSale.setAdvertisements(Arrays.asList(advertisementOne, advertisementTwo, advertisementThree,
-                advertisementFour, advertisementFive, advertisementSix,advertisementSeven,advertisementEight,
-                advertisementNine,advertisementTen));
-//        addressKiril.setAuthor(authorKiril);
-//        addressDima.setAuthor(authorDima);
-//        addressTimur.setAuthor(authorTimur);
-//
-//        emailKiril.setAuthor(authorKiril);
-//        emailDima.setAuthor(authorDima);
-//        emailTimur.setAuthor(authorTimur);
-//
-//        phoneKirilMTS.setAuthor(authorKiril);
-//        phoneKirilKievstar.setAuthor(authorKiril);
-//        phoneDimaMTS.setAuthor(authorDima);
-//        phoneDimaKievstar.setAuthor(authorDima);
-//        phoneTimurMTS.setAuthor(authorTimur);
-//        phoneTimurKievstar.setAuthor(authorTimur);
-
-//        entityManager.persist(rubricAutoSale);
+                advertisementFour, advertisementFive, advertisementSix, advertisementSeven, advertisementEight,
+                advertisementNine, advertisementTen));
         entityManager.persist(rubricElectronic);
-//        entityManager.persist(addressKiril);
-//        entityManager.persist(addressDima);
-//        entityManager.persist(addressTimur);
-//        entityManager.persist(emailKiril);
-//        entityManager.persist(emailDima);
-//        entityManager.persist(emailTimur);
-//        entityManager.persist(phoneKirilMTS);
-//        entityManager.persist(phoneKirilKievstar);
-//        entityManager.persist(phoneDimaMTS);
-//        entityManager.persist(phoneDimaKievstar);
-//        entityManager.persist(phoneTimurMTS);
-//        entityManager.persist(phoneTimurKievstar);
         entityManager.persist(authorKiril);
         entityManager.persist(authorDima);
         entityManager.persist(authorTimur);
         entityManager.persist(advertisementOne);
 
-//        entityManager.persist(advertisementTwo);
-//        entityManager.persist(advertisementThree);
-//        entityManager.persist(advertisementFour);
-//        entityManager.persist(advertisementFive);
-//        entityManager.persist(advertisementSix);
-//        entityManager.persist(advertisementSeven);
-//        entityManager.persist(advertisementEight);
-//        entityManager.persist(advertisementNine);
-        //entityManager.persist(menu);
-        //entityManager.persist(rubricService);
-//        entityManager.persist(service);
         transaction.commit();
         entityManager.close();
 
         AdvertisementService service1 = new AdvertisementService();
-        Advertisement advertisementEleven= new Advertisement("Adv11", date, "Sell eleven",
+        Advertisement advertisementEleven = new Advertisement("Adv11", date, "Sell eleven",
                 111, authorTimur, rubricAutoSale);
         service1.createNewAdvertisement(advertisementEleven, 12, authorTimur);
 //

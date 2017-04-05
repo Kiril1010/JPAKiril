@@ -59,11 +59,6 @@ public class Advertisement {
         this.rubric = rubric;
     }
 
-//    public Advertisement(String name, Date date, String text, double price, Author author, Rubric rubric) {
-//        this(name, date, text, price, author);
-//        this.rubric = rubric;
-//    }
-
     public int getId() {
         return id;
     }
