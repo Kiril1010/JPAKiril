@@ -1,11 +1,10 @@
 package final_project;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+
 
 public class AdvertisementService implements PersistService<Advertisement> {
 
@@ -17,9 +16,9 @@ public class AdvertisementService implements PersistService<Advertisement> {
 
         Rubric rubric = entityManager.find(Rubric.class, rubricId);
         Author author1 = entityManager.merge(author);
+        rubric.addAdvert(advertisement);
         advertisement.setAuthor(author1);
         advertisement.setRubric(rubric);
-        rubric.addAdvert(advertisement);
 
         transaction.commit();
         entityManager.close();
@@ -49,6 +48,7 @@ public class AdvertisementService implements PersistService<Advertisement> {
     public void deleteAdvertisement(int id) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
+        getEntityFactory();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
@@ -65,10 +65,14 @@ public class AdvertisementService implements PersistService<Advertisement> {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
-        Author author = entityManager.find(Author.class, id);
-        List<Advertisement> advertisements = author.getAdvertisements();
-        entityManager.remove(advertisements);
+//        Author author = entityManager.find(Author.class, id);
+//        author.getAdvertisements().clear();
+        String query = "FROM Advertisement WHERE author = " + id;
+        Query namedQuery = entityManager.createQuery(query);
+        List<Advertisement> advertisements = namedQuery.getResultList();
+        advertisements.stream().forEach(adv -> entityManager.remove(adv));
 
+        System.out.println();
         transaction.commit();
         entityManager.close();
     }

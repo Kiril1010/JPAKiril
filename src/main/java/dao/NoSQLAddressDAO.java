@@ -2,7 +2,7 @@ package dao;
 
 import relationship.unidirectional.AddressUni;
 
-public class NoSQLAddressDAO implements AddressDAO<AddressUni>{
+public class NoSQLAddressDAO implements AddressDAO<AddressUni> {
 
     @Override
     public AddressUni getAddressById() {

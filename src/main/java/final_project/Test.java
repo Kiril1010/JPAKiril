@@ -12,6 +12,12 @@ public class Test {
 
     public static void main(String[] args) {
 
+        /*
+        * Вынести получение менеджера в сервис
+        * ДАО
+        * пакеты
+        * */
+
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
@@ -83,23 +89,24 @@ public class Test {
         entityManager.close();
 
         AdvertisementService service1 = new AdvertisementService();
-        Advertisement advertisementEleven = new Advertisement("Adv11", date, "Sell eleven",
-                111, authorTimur, rubricAutoSale);
-        service1.createNewAdvertisement(advertisementEleven, 12, authorTimur);
+//        Advertisement advertisementEleven = new Advertisement("Adv11", date, "Sell eleven",
+//                111, authorTimur, rubricAutoSale);
+//        service1.createNewAdvertisement(advertisementEleven, 12, authorTimur);
+////
+////        authorKiril.setName("NewAuthor");
+//        service1.changeAdvertisement(advertisementOne.getId(), "Changed adv", date, "I change this adv",
+//                10000, authorKiril, rubricElectronic);
 //
-//        authorKiril.setName("NewAuthor");
-        service1.changeAdvertisement(advertisementOne.getId(), "Changed adv", date, "I change this adv",
-                10000, authorKiril, rubricElectronic);
-
-        service1.deleteAdvertisement(advertisementTen.getId());
-
+//        service1.deleteAdvertisement(advertisementTen.getId());
+//
         RubricService rubricService = new RubricService();
-        rubricElectronic.setAdvertisements(Arrays.asList(advertisementSix, advertisementSeven));
-        advertisementSix.setRubric(rubricElectronic);
-        advertisementSeven.setRubric(rubricElectronic);
-        rubricService.deleteRubric(rubricElectronic.getId());
+//        rubricElectronic.setAdvertisements(Arrays.asList(advertisementSix, advertisementSeven));
+//        advertisementSix.setRubric(rubricElectronic);
+//        advertisementSeven.setRubric(rubricElectronic);
+//        rubricService.deleteRubric(rubricElectronic.getId());
 
-        authorKiril.setAdvertisements(Arrays.asList(advertisementOne, advertisementTwo, advertisementThree));
-        service1.deleteAllAdvertisementsByAuthor(authorKiril.getId());
+//        service1.deleteAllAdvertisementsByAuthor(authorKiril.getId());
+
+        rubricService.showAdvertisementsFromRubric(54);
     }
 }

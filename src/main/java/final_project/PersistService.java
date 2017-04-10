@@ -33,4 +33,8 @@ public interface PersistService<T> {
         transaction.commit();
         entityManager.close();
     }
+
+    default void getEntityFactory() {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
+    }
 }

@@ -6,6 +6,13 @@ import java.util.List;
 @Entity
 @SequenceGenerator(name = Author.author_id, sequenceName = Author.author_id, initialValue = 1, allocationSize = 50)
 @Table(name = "author")
+//@NamedQueries({
+//        @NamedQuery(
+//                name = "getAllAdvert",
+//                query = "SELECT a FROM advertisement a WHERE a.author = :author"
+//        )
+//})
+
 public class Author {
 
     public static final String author_id = "author_id";

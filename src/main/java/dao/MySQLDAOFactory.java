@@ -9,7 +9,7 @@ public class MySQLDAOFactory extends DAOFactory {
     public static EntityManager getEntityManager() {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa_kiril");
-        return  factory.createEntityManager();
+        return factory.createEntityManager();
     }
 
     @Override

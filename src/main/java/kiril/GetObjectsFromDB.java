@@ -30,8 +30,8 @@ public class GetObjectsFromDB {
 //        System.out.println();
 
 
-//        Query getAllPersons = entityManager.createNamedQuery("getAllPersons");
-//        List<Object[]> listOfPersons = getAllPersons.getResultList();
+        Query getAllPersons = entityManager.createNamedQuery("getAllPersons");
+        List<Object[]> listOfPersons = getAllPersons.getResultList();
 
         Query getAllPerson = entityManager.createNamedQuery("getCountOfCitizens");
         getAllPerson.setParameter("count", 135);

@@ -5,7 +5,7 @@ import relationship.unidirectional.StudentUni;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class NoSQLStudentDAO implements StudentDAO<StudentUni>{
+public class NoSQLStudentDAO implements StudentDAO<StudentUni> {
 
     @Override
     public StudentUni getStudentById(int id) {

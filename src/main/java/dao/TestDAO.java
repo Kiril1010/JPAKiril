@@ -17,10 +17,10 @@ public class TestDAO {
 //        System.out.println(studentFromDb.getName());
 //        MySQLDAOFactory.getEntityManager().close();
 
-    DAOFactory nosqlDAO = DAOFactory.getDAOFactory(DAOFactory.NOSQL);
-    StudentDAO<StudentUni> studentDAO = nosqlDAO.getStudentDAO();
+        DAOFactory nosqlDAO = DAOFactory.getDAOFactory(DAOFactory.NOSQL);
+        StudentDAO<StudentUni> studentDAO = nosqlDAO.getStudentDAO();
 
-    StudentUni student = new StudentUni("Boris");
+        StudentUni student = new StudentUni("Boris");
 
         studentDAO.saveStudent(student);
         StudentUni studentFromDB = studentDAO.getStudentById(1);
@@ -28,4 +28,4 @@ public class TestDAO {
         System.out.println(studentFromDB.getName());
         NoSQLDAOFactory.getEntityManager().close();
     }
- }
+}

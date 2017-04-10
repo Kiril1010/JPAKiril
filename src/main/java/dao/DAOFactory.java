@@ -6,6 +6,7 @@ public abstract class DAOFactory {
 
 
     public abstract StudentDAO getStudentDAO();
+
     public abstract AddressDAO getAddressDAO();
 
     public static DAOFactory getDAOFactory(int factoryId) {

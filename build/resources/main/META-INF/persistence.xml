@@ -7,7 +7,7 @@
         <!--<provider>org.hibernate.jpa.HibernatePersistence</provider>-->
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <!--<class>kiril.Person</class>-->
+        <class>kiril.Person</class>
         <!--<class>inheritance.Car</class>
         <class>inheritance.Bmw</class>
         <class>inheritance.Mercedes</class>-->

@@ -33,4 +33,18 @@ public class RubricService implements PersistService<Rubric>{
         transaction.commit();
         entityManager.close();
     }
+
+    public void showAdvertisementsFromRubric(int id) {
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+
+        Rubric rubric = entityManager.find(Rubric.class, id);
+        List<Advertisement> advertisements = rubric.getAdvertisements();
+        advertisements.stream().forEach(adv -> System.out.println(adv.getName()));
+
+        transaction.commit();
+        entityManager.close();
+    }
 }
