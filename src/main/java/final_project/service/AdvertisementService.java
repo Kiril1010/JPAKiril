@@ -1,16 +1,17 @@
-package final_project;
+package final_project.service;
+
+import final_project.domain.Advertisement;
+import final_project.domain.Author;
+import final_project.domain.Rubric;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 
 
 public class AdvertisementService implements PersistService<Advertisement> {
 
     public void createNewAdvertisement(Advertisement advertisement, int rubricId, Author author) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityManager entityManager = getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
@@ -25,8 +26,7 @@ public class AdvertisementService implements PersistService<Advertisement> {
     }
 
     public void changeAdvertisement(int id, String name, Date date, String text, double price, Author author, Rubric rubric) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityManager entityManager = getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
@@ -46,9 +46,7 @@ public class AdvertisementService implements PersistService<Advertisement> {
     }
 
     public void deleteAdvertisement(int id) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        getEntityFactory();
+        EntityManager entityManager = getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
@@ -59,18 +57,20 @@ public class AdvertisementService implements PersistService<Advertisement> {
         entityManager.close();
     }
 
-    public void deleteAllAdvertisementsByAuthor(int id) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+    public void deleteAllAdvertisementsByAuthor(Author author) {
+        EntityManager entityManager = getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
 //        Author author = entityManager.find(Author.class, id);
 //        author.getAdvertisements().clear();
-        String query = "FROM Advertisement WHERE author = " + id;
+        /*String query = "FROM Advertisement WHERE author = " + id;
         Query namedQuery = entityManager.createQuery(query);
         List<Advertisement> advertisements = namedQuery.getResultList();
-        advertisements.stream().forEach(adv -> entityManager.remove(adv));
+        advertisements.stream().forEach(adv -> entityManager.remove(adv));*/
+
+        String query = "DELETE FROM Advertisement adv WHERE adv.author.id = ?";
+        entityManager.createQuery(query).setParameter(1, 53).executeUpdate();
 
         System.out.println();
         transaction.commit();

@@ -1,4 +1,4 @@
-package final_project;
+package final_project.domain;
 
 import javax.persistence.*;
 import java.util.LinkedList;

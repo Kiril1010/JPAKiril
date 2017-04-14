@@ -1,4 +1,4 @@
-package final_project;
+package final_project.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -6,6 +6,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public interface PersistService<T> {
+
+    EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("jpa_kiril");
 
     /*default T getEntityById(int id, Class<T> tClass) {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
@@ -23,8 +25,7 @@ public interface PersistService<T> {
 
 
     default void save(T entity) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityManager entityManager = getEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 
@@ -34,7 +35,7 @@ public interface PersistService<T> {
         entityManager.close();
     }
 
-    default void getEntityFactory() {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jpa_kiril");
+    default EntityManager getEntityManager() {
+        return ENTITY_MANAGER_FACTORY.createEntityManager();
     }
 }

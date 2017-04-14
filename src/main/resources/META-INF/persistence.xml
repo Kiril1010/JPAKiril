@@ -29,14 +29,14 @@
         <!--<class>dao.MySQLAddressDAO</class>-->
         <!--<class>dao.MySQLStudentDAO</class>-->
         <!--<class>dao.MySQLDAOFactory</class>-->
-       <class>final_project.Address</class>
-        <class>final_project.Advertisement</class>
-        <class>final_project.Author</class>
-        <class>final_project.Email</class>
-        <class>final_project.Phone</class>
-        <class>final_project.Rubric</class>
+       <class>final_project.domain.Address</class>
+        <class>final_project.domain.Advertisement</class>
+        <class>final_project.domain.Author</class>
+        <class>final_project.domain.Email</class>
+        <class>final_project.domain.Phone</class>
+        <class>final_project.domain.Rubric</class>
         <!--<class>final_project.Menu</class>-->
-        <!--<class>final_project.RubricService</class>-->
+        <!--<clfinal_project.service.RubricServicevice</class>-->
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />

@@ -1,4 +1,7 @@
-package final_project;
+package final_project.service;
+
+import final_project.domain.Advertisement;
+import final_project.domain.Rubric;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

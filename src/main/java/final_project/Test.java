@@ -1,5 +1,9 @@
 package final_project;
 
+import final_project.domain.*;
+import final_project.service.AdvertisementService;
+import final_project.service.RubricService;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -105,8 +109,8 @@ public class Test {
 //        advertisementSeven.setRubric(rubricElectronic);
 //        rubricService.deleteRubric(rubricElectronic.getId());
 
-//        service1.deleteAllAdvertisementsByAuthor(authorKiril.getId());
+        service1.deleteAllAdvertisementsByAuthor(authorKiril);
 
-        rubricService.showAdvertisementsFromRubric(54);
+//        rubricService.showAdvertisementsFromRubric(54);
     }
 }

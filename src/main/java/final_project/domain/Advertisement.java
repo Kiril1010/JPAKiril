@@ -11,7 +11,7 @@
 //
 //        В приложении использовать Spring 4, JPA(JPQL, NamedQueries, Criteria queries, lazy initialization)
 
-package final_project;
+package final_project.domain;
 
 import javax.persistence.*;
 import java.util.Date;
